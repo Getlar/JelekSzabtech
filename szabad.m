@@ -1,0 +1,21 @@
+x = linspace(0,15,2000);
+A = 3;
+k = 350;
+m = 50;
+f = 0;
+
+omega = sqrt(k/m);
+figure;
+plot(x, A*cos(omega*x+f));
+hold on;
+figure;
+plot(omega,f+atan2(0, A), ".b");
+hold on;
+omega = linspace(0,15,500);
+figure;
+plot(omega,A,".y");
+hold on;
+niq = complex(A,zeros(size(A)));
+figure;
+plot(real(niq),imag(niq),"*");
+hold off;
